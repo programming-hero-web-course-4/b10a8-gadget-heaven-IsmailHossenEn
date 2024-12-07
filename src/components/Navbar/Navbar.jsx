@@ -1,7 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { GiEternalLove } from "react-icons/gi";
+import { IoCartOutline } from "react-icons/io5";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const navbarStyle = {
+    backgroundColor: location.pathname === "/" ? "#9538E2" : "white",
+    color: location.pathname === "/" ? "white" : "black",
+    padding: "10px",
+    transition: "background-color 0.3s ease",
+  };
   const links = (
     <>
       <li>
@@ -13,10 +23,16 @@ const Navbar = () => {
       <li>
         <NavLink to="Dashboard">Dashboard</NavLink>
       </li>
+      <li>
+        <NavLink to="About">About</NavLink>
+      </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div
+      className="flex px-5 justify-between  max-w-7xl mx-auto "
+      style={navbarStyle}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,8 +63,13 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="flex justify-end items-center ">
+        <button className="px-5 py-5 text-xl bg-white rounded-full items-center justify-center text-center mr-3 ">
+          <IoCartOutline className="text-[#3A3A3A]" />
+        </button>
+        <button className="px-5 py-5 text-xl bg-white rounded-full items-center justify-center text-center ">
+          <GiEternalLove className="text-[#3A3A3A]" />
+        </button>
       </div>
     </div>
   );

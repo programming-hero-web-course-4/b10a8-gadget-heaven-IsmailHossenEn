@@ -14,16 +14,20 @@ const Product = ({ product }) => {
     rating,
   } = product;
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
-      <figure>
+    <div className="card bg-base-100  shadow-xl my-3">
+      <figure className="h-[180px]">
         <img src={product_image} alt={product_title} />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{product_title}</h2>
-        <p>Proce: {price}</p>
-        <div className="card-actions justify-end">
+        <h2 className="text-[#09080F] text-2xl font-semibold">
+          {product_title}
+        </h2>
+        <p className="font-medium text-[#09080F99] text-xl">Proce: {price}</p>
+        <div className="card-actions justify-start mt-4">
           <Link to={`/Products/${product_id}`}>
-            <button className="btn btn-primary">View Details</button>
+            <button className="border border-[#9538E2] text-[#9538E2] px-6 py-3 rounded-[32px] text-lg font-semibold">
+              View Details
+            </button>
           </Link>
         </div>
       </div>

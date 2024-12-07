@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Statistics = () => {
+const About = () => {
   return (
     <div className="hero bg-base-200 min-h-screen bg-gradient-to-r from-[#994bdb] via-[#fd6c5b] via-[#2a75cb] to-[#64adf7] h-64 w-full">
       <div className="hero-content text-center">
@@ -19,4 +19,4 @@ const Statistics = () => {
   );
 };
 
-export default Statistics;
+export default About;

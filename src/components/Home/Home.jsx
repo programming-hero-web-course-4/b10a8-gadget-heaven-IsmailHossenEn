@@ -4,7 +4,7 @@ import Products from "../Products/Products";
 
 const Home = () => {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto pb-28">
       <Banner />
       <Products />
     </div>

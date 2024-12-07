@@ -9,6 +9,9 @@ import Error from "./components/Error/Error.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Statistics from "./components/Statistics/Statistics.jsx";
 import ProductDetails from "./components/ProductDetails/ProductDetails.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import About from "./components/About/About.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +35,11 @@ const router = createBrowserRouter([
       {
         path: "Dashboard",
         element: <Dashboard />,
+        loader: () => fetch("/ProductsData.json"),
+      },
+      {
+        path: "About",
+        element: <About />,
       },
     ],
   },
@@ -40,5 +48,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </StrictMode>
 );
