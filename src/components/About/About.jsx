@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen bg-gradient-to-r from-[#994bdb] via-[#fd6c5b] via-[#2a75cb] to-[#64adf7] h-64 w-full">
+    <div className="hero bg-base-200 min-h-screen bg-gradient-to-r from-[#994bdb]  via-[#2a75cb] to-[#64adf7] h-64 w-full">
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">Comming Soon!</h1>
